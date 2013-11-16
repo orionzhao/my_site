@@ -1,4 +1,4 @@
 my_site
 =======
 
-Building my site from scratch.
+Building my personal website

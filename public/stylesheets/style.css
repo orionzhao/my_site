@@ -5,6 +5,8 @@
  * Grab a custom font from Google
  */
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
+@import url("http://fonts.googleapis.com/css?family=Orbitron");
+
 /*
  * Nib provides a CSS reset
  */
@@ -110,6 +112,14 @@ a img {
   font-family: 'Courier_Prime';
   src: url("/fonts/Courier/Courier_Prime.ttf");
 }
+
+.stack {
+  text-align: center;
+  width: 500px;
+  font-family: 'Orbitron';
+  font-size: 25px;
+}
+
 body {
   font-family: 'Georgia';
   background-color: #faf9f0;
@@ -174,6 +184,9 @@ header {
 .sidebar {
   float: left;
   width: 200px;
+  position: absolute;
+  top: 90px;
+  left: 150px;
 }
 .sidebar .widget {
 /*
@@ -181,6 +194,7 @@ header {
      * prefixes here. Nib will
      * add them for us
      */
+
   -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -206,6 +220,19 @@ header {
 p {
   line-height: 1.8;
 }
+a:link    {
+  color:green;
+}
+a:visited {
+  color:green;
+}
+a:hover   {
+  color:red;
+}
+a:active  {
+  color:grey;
+}
+
 footer {
   width: 500px;
   margin: 50px auto;
