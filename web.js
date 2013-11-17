@@ -14,6 +14,9 @@ function compile(str, path) {
     .use(nib())
 }
 
+/*var engines = require('consolidate');
+app.engine('html', engines.swig); */
+
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 app.use(express.logger('dev'))
@@ -28,6 +31,12 @@ app.get('/', function (req, res) {
   res.render('index',
   	{title : 'A hungry fool'}
   	)
+})
+
+app.get('/recent', function (req, res) {
+  res.render('recent',
+    {title : 'Foolish Things'}
+    )
 })
 
 var port = process.env.PORT || 3000

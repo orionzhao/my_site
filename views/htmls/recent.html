@@ -1,0 +1,16 @@
+extend layout
+body
+
+block content
+  video(width='320', height='240', controls='controls', autoplay='autoplay')
+    source(src='http://www.youtube.com/watch?v=RBumgq5yVrA')
+      object(data='http://www.youtube.com/watch?v=RBumgq5yVrA', width='320', height='240')
+       embed(width='320', height='240', src='http://www.youtube.com/watch?v=RBumgq5yVrA')
+
+//block sidebar
+  .widget
+    h1 My tweets
+    p
+      | tweet1
+    p
+      | tweet2

@@ -6,7 +6,7 @@
     "express": "3.0.0alpha4",
     "jade": "*",
     "stylus": "*",
-    "nib": "*"
+    "nib": "*",
   },
   "engines": {
     "node": "0.10.x",
