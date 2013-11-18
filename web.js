@@ -5,6 +5,8 @@
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
+  , swig = require('swig');
+
 
 var app = express()
 
@@ -17,6 +19,9 @@ function compile(str, path) {
 
 var engines = require('consolidate');
 app.engine('html', engines.swig);
+
+app.set('view cache', false);
+swig.setDefaults({ cache: false });
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'html')
