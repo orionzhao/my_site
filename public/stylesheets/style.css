@@ -6,6 +6,7 @@
  */
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
 @import url("http://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans");
 
 /*
  * Nib provides a CSS reset
@@ -207,7 +208,7 @@ body {
 .page-sub-title {
   font-size: 2em; 
   text-align:center; 
-  padding-bottom: 20px;
+  margin: 20px;
 }
 header {
   font-family: 'Quicksand';
@@ -269,6 +270,22 @@ header {
 }
 p {
   line-height: 1.8;
+}
+
+.article-title {
+  font-family: 'Alegreya Sans';
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.article-title a {
+  text-decoration: none;
+  color: rgb(59, 129, 131);
+}
+
+.article-title a:visited {
+  color: none;
 }
 
 footer {
