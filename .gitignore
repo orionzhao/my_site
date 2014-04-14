@@ -6,7 +6,8 @@ db/schema.rb
 .*.swp
 .*.swo
 .DS_Store
-.rspec
+node_modules
+.tmp
 installer/rails_installer.yml
 #/public/files
 #/public/images/theme
