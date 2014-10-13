@@ -4,9 +4,7 @@
 
 var express = require('express')
   , stylus = require('stylus')
-  , nib = require('nib')
-  , swig = require('swig');
-
+  , nib = require('nib');
 
 var app = express()
 
@@ -16,14 +14,9 @@ function compile(str, path) {
     .use(nib())
 }
 
-var engines = require('consolidate');
-app.engine('html', engines.swig);
-
 app.set('view cache', false);
-swig.setDefaults({ cache: false });
-
 app.set('views', __dirname + '/views')
-app.set('view engine', 'html')
+app.set('view engine', 'jade')
 app.use(express.logger('dev'))
 
 app.use(stylus.middleware(
@@ -35,15 +28,7 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function (req, res) {
-  res.render('index')
-})
-
-app.get('/recent', function (req, res) {
-  res.render('recent')
-})
-
-app.get('/a-stack-a-day-keeps-the-bug-away', function (req, res) {
-  res.render('a-stack-a-day-keeps-the-bug-away')
+  res.render('index', {title : 'A hungry fool'})
 })
 
 var port = process.env.PORT || 3000
