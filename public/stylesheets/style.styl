@@ -40,23 +40,44 @@ body
   font-family 'Quicksand'
 
 .landing_name_vertical
-  font-family 'Quicksand'
   position relative
   top 60px
-  left 180px 
-  
+  left 180px
+
+@media only screen and (max-width: 768px)
+  .landing_name
+    font-size 80px
+
+  .landing_name_vertical
+    position relative
+    top 60px
+    left 180px
+
 .rotate
   /* Safari */
   -webkit-transform  rotate(90deg)
-
   /* Firefox */
   -moz-transform  rotate(90deg)
-
   /* IE */
   -ms-transform  rotate(90deg)
-
   /* Opera */
   -o-transform  rotate(90deg)
+
+  -webkit-transition: transform 0.2s
+  -moz-transition: transform 0.2s
+  transition: transform 0.2s
+
+@media only screen and (max-width: 768px)
+  .rotate
+    /* Safari */
+    -webkit-transform  rotate(0deg)
+    /* Firefox */
+    -moz-transform  rotate(0deg)
+    /* IE */
+    -ms-transform  rotate(0deg)
+    /* Opera */
+    -o-transform  rotate(0deg)
+
 
 .icons
   width 500px
@@ -67,6 +88,9 @@ body
   overflow hidden
   a
     text-decoration none
+
+.icon
+  height 38px
 
 header
   font-family 'Quicksand'
